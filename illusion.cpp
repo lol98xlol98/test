@@ -12,6 +12,7 @@
 					reinterpret_cast <ClientClass *> (mapbase->numFields)->m_pNext;
 					if (typeDEscription->fieldName == "DT_DOTA_BaseNPC_Hero")
 					{
+                                        unsigned int addy = 0x00000000;
 					addy = reinterpret_cast <unsigned int>(typeDEscription->flatOffset);
 						auto BaseofHeroMap = mapbase;
 						auto FieldsHeroMap = (Datamap*)mapbase->numFields;
@@ -21,7 +22,7 @@
 							reinterpret_cast <ClientClass *> (BaseofHeroMap->numFields)->m_pNext;
 							if (herobaseT->fieldName == "m_hReplicatingOtherHeroModel")
 							{
-								unsigned int addy = 0x00000000;
+								
 								unsigned int offset = 0x0;
 								offset = reinterpret_cast <unsigned int>(herobaseT->flatOffset);
 								
